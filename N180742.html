@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>N180742 Registration</title>
+	<script type="text/javascript" src="vineela.js"></script>
+	<style type="text/css">
+		body{
+			background-color:white;
+			    height:100px;
+			    background-repeat: no-repeat;
+			    background-size: cover;
+			    background-position: bottom center;
+			    background-attachment: fixed;
+			    position: relative;
+			    top: 12px
+			}
+
+		.head {
+			font-size: 30px;
+			background-color: blue;
+			border: 1px solid black;
+			padding-top:5px;
+			padding-bottom: 5px;
+			padding-right: 40px;
+			padding-left: 40px;
+			margin-top: 20px;
+			border-radius: 5px;
+			text-decoration: underline;
+			color: white;
+		}
+		sub
+		{
+			color: red;
+		}
+		.head:hover
+		{ 
+			background-color:green;
+		   color:yellow;
+		}
+		sub:hover
+		{
+			color: yellow;
+		}
+		.div1{
+			margin-top: 10px;
+			background-color:grey;
+			color: whitesmoke;
+			margin-left: 300px;
+			margin-right: 300px;
+			padding-top: 30px;
+			padding-bottom: 50px;
+			height: 500px;
+		}
+</style>	
+			
+</head>
+<body>
+    <center>
+    	<table class="head">
+    		<tr><td>F1H2O<sub><small>RGUKT</small></sub></td></tr>
+    	</table>
+    	<div class="div1" id="img">
+    		<!-- <div id="container">
+			    <img src="R1.jpg">
+			    <img src="R2.jpg">
+			    <img src="R3.jpg">
+			</div> -->
+    			<form action="/vp.php" method="post" onsubmit="return validate();">
+    			<table>
+    				<h2>REGISTRATION FORM</h2>
+    				<tr><td>Username</td><td><input type="text" placeholder="enter name" onkeyup="this.value=this.value.toUpperCase()"  id="user"><label id="n" style="color:red;visibility:hidden;">invalid Username</label></td></tr>
+    				<tr><td>Email</td><td><input type="text" placeholder="enter mail id" id="email"><label id="e" style="color:red;visibility:hidden;">invalid MailID</label></td></tr>
+    				<tr><td>Mobile Number</td><td><input type="text" id="number" name=""><label id="m" style="color:red;visibility:hidden;">invalid Mobileno</label></td></tr>
+    				<tr><td><label for="country">Country Name</label></td><td>
+										  <select name="country" id="counrty">
+										  	<option value="-select country-">-select country-</option>
+										    <option value="India">India</option>
+										    <option value="America">America</option>
+										    <option value="England">Engaland</option>
+										    <option value="Germany">Germany</option>
+										    <option value="RGUKT Students">RGUKT Students</option>
+										    <option value="RGUKT Faculty">RGUKT Faculty</option>
+										  </select></td></tr>
+    				<tr><td>PaymentType</td><td><input type="text" name=""></td></tr>
+    				<div>
+    				<tr><td>Type of Accommodation</td><td>
+											   <input type="radio" id="html" value="INuzvid">
+											   <label for="Nuzvid">INuzvid</label><br>
+											   <input type="radio" id="css" value="Ikadapa">
+											   <label for="Ikadapa">Ikadapa</label><br>
+										       <input type="radio" id="js" value="ISKLM">
+									           <label for="ISKLM">ISKLM</label><br>
+									           <input type="radio" id="jquery" value="IOngole">
+										  <label for="IOngole">IOngole</label><br>
+											   </td></tr>
+											</div>
+					<tr><td>Required Services</td>
+						<td><input type="checkbox" id="c1">Breakfast<br>
+							<input type="checkbox" id="c2">Lunch<br>
+							<input type="checkbox" id="c3">Snacks<br>
+							<input type="checkbox" id="c4">Tea<br>
+							<input type="checkbox" id="c5">Coffee<br>
+							<input type="checkbox" id="c6">Eggs<br></td></tr>
+    				<tr><td>No. of Days Staying</td><td><input type="text" name=""></td></tr>
+    				<tr><td>Payment type</td></tr>
+    				<div id="pay">
+    					<tr><td><label for="DD">DD number</label></td><td><input type="text" id="dd" placeholder="enter DD number" max="8" onchange="DDvalidation()"></td></tr>
+    				</div>
+    				<div id="pay1">
+    					<tr><td><label for="ACC">Account number</label></td><td><input type="text" id="ac" placeholder="enter AC number" max="11" onchange="ACvalidation()"></td></tr>
+    				</div>
+    				<tr><td></td></tr><td></td><td><input type="submit" name="s" value="Register"></td></tr>
+    			</table>
+    		</form>
+    	</div>
+    </center>
+    <script type="text/javascript">
+    	 function changeBg(){
+        const images=[
+            'url("R.jpg")',
+            'url("R1.jpg")',
+            'url("R2.jpg")',
+            'url("R3.jpg")',
+    
+        ]
+        const section=document.querySelector("#img")
+        const bg=images[Math.floor(Math.random()* images.length )];
+        img.style.backgroundImage=bg;
+    }
+    setInterval(changeBg,500)
+    </script>
+</body>
+</html>
